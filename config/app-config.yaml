@@ -1,6 +1,6 @@
 # Combined Application Configuration
 
-production:
+production: 
   application:
     name: DevOpsSimulator
     version: 1.0.0
