@@ -1,69 +1,71 @@
-application:
-  name: DevOpsSimulator
-  version: 1.0.0
-  environment: production
-  
-server:
-  host: 0.0.0.0
-  port: 8080
-  ssl_enabled: true
-  
-logging:
-  level: INFO
-  format: json
-  
-# Development configuration (enabled via environment variable)
-development:
-  enabled: false
-  port: 3000
-  hot_reload: false
-  debug_mode: false
-  mock_apis: false
+# Combined Application Configuration
 
-# Experimental Application Configuration
-application:
-  name: DevOpsSimulator
-  version: 3.0.0-experimental
-  environment: testing
-  experimental_mode: true
+production:
+  application:
+    name: DevOpsSimulator
+    version: 1.0.0
+    environment: production
   
-server:
-  host: 0.0.0.0
-  port: 9000
-  ssl_enabled: true
-  multi_port: [9000, 9001, 9002]
+  server:
+    host: 0.0.0.0
+    port: 8080
+    ssl_enabled: true
   
-logging:
-  level: TRACE
-  format: structured
-  output: /var/log/experimental.log
-  ai_analysis: enabled
+  logging:
+    level: INFO
+    format: json
   
-database:
-  host: cluster.example.com
-  port: 5432
-  name: devops_experimental
-  distributed: true
+  development:
+    enabled: false
+    port: 3000
+    hot_reload: false
+    debug_mode: false
+    mock_apis: false
+
+experimental:
+  application:
+    name: DevOpsSimulator
+    version: 3.0.0-experimental
+    environment: testing
+    experimental_mode: true
   
-features:
-  auto_scaling: advanced
-  load_balancer: ai-optimized
-  backup_enabled: true
-  chaos_engineering: enabled
+  server:
+    host: 0.0.0.0
+    port: 9000
+    ssl_enabled: true
+    multi_port: [9000, 9001, 9002]
   
-ai_features:
-  predictive_scaling: true
-  anomaly_detection: true
-  auto_optimization: true
-  model_version: "v2.1.0"
+  logging:
+    level: TRACE
+    format: structured
+    output: /var/log/experimental.log
+    ai_analysis: enabled
   
-cloud_providers:
-  - aws
-  - azure
-  - gcp
-  - digitalocean
+  database:
+    host: cluster.example.com
+    port: 5432
+    name: devops_experimental
+    distributed: true
   
-security:
-  zero_trust: enabled
-  encryption: AES-256
-  audit_logging: comprehensive
+  features:
+    auto_scaling: advanced
+    load_balancer: ai-optimized
+    backup_enabled: true
+    chaos_engineering: enabled
+  
+  ai_features:
+    predictive_scaling: true
+    anomaly_detection: true
+    auto_optimization: true
+    model_version: "v2.1.0"
+  
+  cloud_providers:
+    - aws
+    - azure
+    - gcp
+    - digitalocean
+  
+  security:
+    zero_trust: enabled
+    encryption: AES-256
+    audit_logging: comprehensive
