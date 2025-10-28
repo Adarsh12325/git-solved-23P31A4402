@@ -4,7 +4,7 @@
       "host": "prod-db.example.com",
       "port": 5432,
       "database": "devops_production",
-      "ssl_mode": "require",
+      "ssl_mode": "require", 
       "pool_size": 20
     },
     "backup": {
