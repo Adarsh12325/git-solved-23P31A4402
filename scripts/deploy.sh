@@ -7,7 +7,7 @@ echo "================================================"
 
 # Default environment (production, development, experimental)
 DEPLOY_ENV=${DEPLOY_ENV:-production}
-AI_OPTIMIZATION=false
+AI_OPTIMIZATION=false   
 CHAOS_TESTING=false
 
 case "$DEPLOY_ENV" in
