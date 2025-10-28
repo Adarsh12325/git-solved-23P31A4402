@@ -1,0 +1,6 @@
+- 24549e3: feat: Add new feature (adarsh, 83 minutes ago)
+- 17295e2: merge: Resolve all conflicts between main and dev branches Conflicts resolved in 6 files: - config/app-config.yaml: Combined production and development configurations - config/database-config.json: Created separate profiles for each environment - scripts/deploy.sh: Added multi-environment support with conditional logic - scripts/monitor.js: Implemented environment-based configuration - docs/architecture.md: Merged documentation covering both environments - README.md: Combined feature lists and updated documentation Resolution strategy: Maintained production stability while integrating development features as optional configurations. All features are now accessible through environment variables. (adarsh, 2 hours ago)
+- 02011a5: updating dev (Hanu Gupta, 5 days ago)
+- 0312c6f: updating main (Hanu Gupta, 5 days ago)
+- fadfd24: Revise README for DevOps Simulator project (Hanu Gupta, 5 days ago)
+- ae630eb: Initial commit (Hanu Gupta, 5 days ago)
