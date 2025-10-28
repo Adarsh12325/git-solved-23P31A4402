@@ -3,7 +3,7 @@
  * Combines standard (prod/dev) and AI-enhanced (experimental) monitoring
  */
 
-const ENV = process.env.NODE_ENV || 'production';
+const ENV = process.env.NODE_ENV || 'production'; 
 
 const monitorConfig = {
   production: {
