@@ -6,7 +6,7 @@ echo "DevOps Simulator - Unified Deployment System"
 echo "================================================"
  
 # Default environment (production, development, experimental)
-DEPLOY_ENV=${DEPLOY_ENV:-production}
+DEPLOY_ENV=${DEPLOY_ENV:-production} 
 AI_OPTIMIZATION=false
 CHAOS_TESTING=false
 
