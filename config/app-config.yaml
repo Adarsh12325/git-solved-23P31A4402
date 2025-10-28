@@ -4,7 +4,7 @@ production:
   application:
     name: DevOpsSimulator
     version: 1.0.0
-    environment: production
+    environment: production 
   
   server:
     host: 0.0.0.0
