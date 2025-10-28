@@ -7,7 +7,7 @@ This document covers **Production**, **Development**, and **Experimental (AI)** 
 ---
 
 ## Architecture Modes
-| Mode | Description |
+| Mode | Description | 
 |------|--------------|
 | **Production** | Stable deployment with performance and reliability focus |
 | **Development** | Lightweight local environment with hot reload & debugging |
