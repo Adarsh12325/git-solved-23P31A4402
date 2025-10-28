@@ -33,3 +33,10 @@ A comprehensive CI/CD configuration management tool for enterprise deployments.
 ```bash
 export DEPLOY_ENV=production
 ./scripts/deploy.sh
+
+```
+### Development Mode
+```bash
+export NODE_ENV=development
+npm install
+npm run dev
