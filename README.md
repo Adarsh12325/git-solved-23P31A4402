@@ -37,7 +37,9 @@ export DEPLOY_ENV=production
 ./scripts/deploy.sh
 "## FAQ"
 
+```
 ### Development mode
+```bash
 export NODE_ENV=development
 npm install
 npm run dev
