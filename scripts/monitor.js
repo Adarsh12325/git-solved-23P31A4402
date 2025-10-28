@@ -7,7 +7,7 @@ const ENV = process.env.NODE_ENV || 'production';
 
 const monitorConfig = {
   production: {
-    interval: 60000,
+    interval: 60000, 
     alertThreshold: 80,
     debugMode: false,
     aiEnabled: false
