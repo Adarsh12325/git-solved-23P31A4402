@@ -81,48 +81,56 @@ merge conflicts across multiple branches using proper Git workflows.
 - **Time**: 10 minutes
 
 ### Merge 2: main + conflict-simulator (6 files)
+Merge Conflict Summary — Production + Experimental Integration
 
 #### Conflict 1: config/app-config.yaml
-- **Issue**: Production used port 8080, development used 3000
-- **Resolution**: Created unified config with environment-based settings
-- **Strategy**: Keep production as default, add dev as optional
-- **Difficulty**: Medium
-- **Time**: 15 minutes
+- **Issue**: Production used static ports (8080, 3000), Experimental introduced AI and metrics ports (9000–9002)
+-**Resolution**: Unified configuration supporting multi-port environments
+-**Strategy**: Default to production ports; include AI ports under experimental profile
+-**Difficulty**: Medium
+-**Time**: 20 minutes
 
 #### Conflict 2: config/database-config.json
-- **Issue**: Different database hosts and SSL modes
-- **Resolution**: Created separate profiles for production and development
-- **Strategy**: Restructured JSON to support both environments
-- **Difficulty**: Medium
-- **Time**: 10 minutes
+-**Issue**: Production had traditional single-host DB; Experimental introduced distributed and replicated setup
+-**Resolution**: Integrated both into a structured multi-environment JSON
+-**Strategy**: Keep production and development under standard section; add distributed cluster under experimental
+-**Difficulty**: Medium
+-**Time**: 15 minutes
 
 #### Conflict 3: scripts/deploy.sh
-- **Issue**: Different deployment strategies (production vs docker-compose)
-- **Resolution**: Added conditional logic based on DEPLOY_ENV variable
-- **Strategy**: Made script handle both environments dynamically
-- **Difficulty**: Hard
-- **Time**: 20 minutes
+-**Issue**: Production used rolling updates; Experimental had AI-based predictive scaling
+-**Resolution**: Merged both into one adaptive deployment script
+-**Strategy**: Added conditional flags (--experimental, DEPLOY_ENV) to handle different strategies dynamically
+-**Difficulty**: Hard
+-**Time**: 25 minutes
 
 #### Conflict 4: scripts/monitor.js
-- **Issue**: Different monitoring intervals and log formats
-- **Resolution**: Environment-based configuration object
-- **Strategy**: Used process.env.NODE_ENV to determine behavior
-- **Difficulty**: Medium
-- **Time**: 15 minutes
+-**Issue**: Production had simple monitoring; Experimental used AI prediction and ML-based metrics
+-**Resolution**: Combined both modes with environment toggle
+-**Strategy**: Retained production stability, added AI-enhanced monitoring under experimental mode
+-**Difficulty**: Hard
+-**Time**: 25 minutes
 
 #### Conflict 5: docs/architecture.md
-- **Issue**: Different architectural descriptions
-- **Resolution**: Merged both descriptions into comprehensive document
-- **Strategy**: Created sections for each environment
-- **Difficulty**: Easy
-- **Time**: 10 minutes
+-**Issue**: Production described microservices setup; Experimental added event-driven AI/ML and multi-cloud details
+-**Resolution**: Created a comprehensive architecture covering all environments
+-**Strategy**: Organized into “Stable” and “Experimental” sections for clarity
+-**Difficulty**: Medium
+-**Time**: 15 minutes
 
 #### Conflict 6: README.md
-- **Issue**: Different feature lists and version numbers
-- **Resolution**: Combined all features with clear environment labels
-- **Strategy**: Organized features by category
-- **Difficulty**: Easy
-- **Time**: 10 minutes
+-**Issue**: Production focused on CI/CD basics; Experimental added AI, ML, and chaos engineering features
+-**Resolution**: Merged all content, distinguishing Stable and Experimental builds
+-**Strategy**: Unified documentation while keeping version history intact
+-**Difficulty**: Easy
+-**Time**: 10 minutes-
+
+#### Overall Summary
+All conflicts were resolved by merging production stability with experimental AI capabilities.
+Final codebase now supports:
+-Environment-aware configurations
+-AI-enhanced monitoring and deployment
+-Unified documentation and maintainability
 
 
 ## Used ALL Git Commands
