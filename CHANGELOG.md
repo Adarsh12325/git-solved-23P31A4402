@@ -6,14 +6,14 @@
 - ae630eb: Initial commit (Hanu Gupta, 5 days ago)
 
 C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git log feature/new-feature --oneline
-ac10ba5 (origin/feature/new-feature, feature/new-feature) feat: Add new feature
-7a4f583 (origin/main) merge: Resolve all conflicts between main and conflict-simulator branches
-17295e2 merge: Resolve all conflicts between main and dev branches Conflicts resolved in 6 files: - config/app-config.yaml: Combined production and development configurations - config/database-config.json: Created separate profiles for each environment - scripts/deploy.sh: Added multi-environment support with conditional logic - scripts/monitor.js: Implemented environment-based configuration - docs/architecture.md: Merged documentation covering both environments - README.md: Combined feature lists and updated documentation Resolution strategy: Maintained production stability while integrating development features as optional configurations. All features are now accessible through environment variables.
-d3dd9b2 (instructor/conflict-simulator, conflict-simulator) updating conflict-simulator
-02011a5 (instructor/dev, dev) updating dev
-0312c6f (instructor/main, instructor/HEAD) updating main
-fadfd24 Revise README for DevOps Simulator project
-ae630eb Initial commit
+- ac10ba5 (origin/feature/new-feature, feature/new-feature) feat: Add new feature
+- 7a4f583 (origin/main) merge: Resolve all conflicts between main and conflict-simulator branches
+- 17295e2 merge: Resolve all conflicts between main and dev branches Conflicts resolved in 6 files: - config/app-config.yaml: Combined - - production and development configurations - config/database-config.json: Created separate profiles for each environment - scripts/deploy.sh: Added multi-environment support with conditional logic - scripts/monitor.js: Implemented environment-based configuration - docs/architecture.md: Merged documentation covering both environments - README.md: Combined feature lists and updated documentation Resolution strategy: Maintained production stability while integrating development features as optional configurations. All features are now accessible through environment variables.
+- d3dd9b2 (instructor/conflict-simulator, conflict-simulator) updating conflict-simulator
+- 02011a5 (instructor/dev, dev) updating dev
+- 0312c6f (instructor/main, instructor/HEAD) updating main
+- fadfd24 Revise README for DevOps Simulator project
+- ae630eb Initial commit
 
 C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git cherry-pick
 
