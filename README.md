@@ -39,5 +39,5 @@ export DEPLOY_ENV=production
 ```bash
 export NODE_ENV=development
 npm install
-npm run dev
+npm run conflict-simulator
 
