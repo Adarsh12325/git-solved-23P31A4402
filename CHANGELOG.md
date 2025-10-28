@@ -5,6 +5,163 @@
 - fadfd24: Revise README for DevOps Simulator project (Hanu Gupta, 5 days ago)
 - ae630eb: Initial commit (Hanu Gupta, 5 days ago)
 
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git log feature/new-feature --oneline
+ac10ba5 (origin/feature/new-feature, feature/new-feature) feat: Add new feature
+7a4f583 (origin/main) merge: Resolve all conflicts between main and conflict-simulator branches
+17295e2 merge: Resolve all conflicts between main and dev branches Conflicts resolved in 6 files: - config/app-config.yaml: Combined production and development configurations - config/database-config.json: Created separate profiles for each environment - scripts/deploy.sh: Added multi-environment support with conditional logic - scripts/monitor.js: Implemented environment-based configuration - docs/architecture.md: Merged documentation covering both environments - README.md: Combined feature lists and updated documentation Resolution strategy: Maintained production stability while integrating development features as optional configurations. All features are now accessible through environment variables.
+d3dd9b2 (instructor/conflict-simulator, conflict-simulator) updating conflict-simulator
+02011a5 (instructor/dev, dev) updating dev
+0312c6f (instructor/main, instructor/HEAD) updating main
+fadfd24 Revise README for DevOps Simulator project
+ae630eb Initial commit
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git cherry-pick
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git cherry-pick ac10ba5
+error: your local changes would be overwritten by cherry-pick.
+hint: commit your changes or stash them to proceed.
+fatal: cherry-pick failed
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git cherry-pick 7a4f583
+error: your local changes would be overwritten by cherry-pick.
+hint: commit your changes or stash them to proceed.
+fatal: cherry-pick failed
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git add .
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git stash
+Saved working directory and index state WIP on main: 70f04c7 docs: Add FAQ section
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git cherry-pick ac10ba5
+[main 23f17d1] feat: Add new feature
+ Date: Tue Oct 28 14:50:49 2025 +0530
+ 1 file changed, 2 insertions(+)
+ create mode 100644 scripts/new-feature.js
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git push origin main
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 689 bytes | 172.00 KiB/s, done.
+Total 7 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To https://github.com/Adarsh12325/git-solved-23P31A4402.git
+   7a4f583..23f17d1  main -> main
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git checkout -b feature/another-feature
+Switched to a new branch 'feature/another-feature'
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>echo "test" > test.txt
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git add test.txt
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git commit -m "feat: Add test feature"
+[feature/another-feature 5c0c6eb] feat: Add test feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>echo "update" >> README.md
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git add README.md
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git commit -m "docs: Update README"
+[main e7b2a8a] docs: Update README
+ 1 file changed, 1 insertion(+)
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git checkout feature/another-feature
+Switched to branch 'feature/another-feature'
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git rebase main
+Successfully rebased and updated refs/heads/feature/another-feature.
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git push origin feature/another-feature --force
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 534 bytes | 41.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'feature/another-feature' on GitHub by visiting:
+remote:      https://github.com/Adarsh12325/git-solved-23P31A4402/pull/new/feature/another-feature
+remote:
+To https://github.com/Adarsh12325/git-solved-23P31A4402.git
+ * [new branch]      feature/another-feature -> feature/another-feature
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>echo "BUG" >> scripts/deploy.sh
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git add scripts/deploy.sh
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git commit -m "Bad commit"
+[feature/another-feature 6804bbf] Bad commit
+ 1 file changed, 1 insertion(+)
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git revert HEAD
+[feature/another-feature 9f33a4c] Revert "Bad commit"
+ 1 file changed, 1 deletion(-)
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git reset --soft HEAD~1
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git reset --mixed HEAD~1
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git reset --hard HEAD~1
+HEAD is now at e7b2a8a docs: Update README
+
+C:\GPP_TASKS\Git_Mastery\git-mastery-challenge-template>git reflog
+e7b2a8a (HEAD -> feature/another-feature, main) HEAD@{0}: reset: moving to HEAD~1
+de11176 (origin/feature/another-feature) HEAD@{1}: reset: moving to HEAD~1
+6804bbf HEAD@{2}: reset: moving to HEAD~1
+9f33a4c HEAD@{3}: revert: Revert "Bad commit"
+6804bbf HEAD@{4}: commit: Bad commit
+de11176 (origin/feature/another-feature) HEAD@{5}: rebase (finish): returning to refs/heads/feature/another-feature
+de11176 (origin/feature/another-feature) HEAD@{6}: rebase (pick): feat: Add test feature
+e7b2a8a (HEAD -> feature/another-feature, main) HEAD@{7}: rebase (start): checkout main
+5c0c6eb HEAD@{8}: checkout: moving from main to feature/another-feature
+e7b2a8a (HEAD -> feature/another-feature, main) HEAD@{9}: commit: docs: Update README
+23f17d1 (origin/main) HEAD@{10}: checkout: moving from feature/another-feature to main
+5c0c6eb HEAD@{11}: commit: feat: Add test feature
+e7b2a8a (HEAD -> feature/another-feature, main) HEAD@{0}: reset: moving to HEAD~1
+de11176 (origin/feature/another-feature) HEAD@{1}: reset: moving to HEAD~1
+6804bbf HEAD@{2}: reset: moving to HEAD~1
+9f33a4c HEAD@{3}: revert: Revert "Bad commit"
+6804bbf HEAD@{4}: commit: Bad commit
+de11176 (origin/feature/another-feature) HEAD@{5}: rebase (finish): returning to refs/heads/feature/another-feature
+de11176 (origin/feature/another-feature) HEAD@{6}: rebase (pick): feat: Add test feature
+e7b2a8a (HEAD -> feature/another-feature, main) HEAD@{7}: rebase (start): checkout main
+5c0c6eb HEAD@{8}: checkout: moving from main to feature/another-feature
+e7b2a8a (HEAD -> feature/another-feature, main) HEAD@{9}: commit: docs: Update README
+23f17d1 (origin/main) HEAD@{10}: checkout: moving from feature/another-feature to main
+5c0c6eb HEAD@{11}: commit: feat: Add test feature
+23f17d1 (origin/main) HEAD@{12}: checkout: moving from main to feature/another-feature
+23f17d1 (origin/main) HEAD@{13}: cherry-pick: feat: Add new feature
+70f04c7 HEAD@{14}: reset: moving to HEAD
+70f04c7 HEAD@{15}: checkout: moving from main to main
+70f04c7 HEAD@{16}: checkout: moving from main to main
+70f04c7 HEAD@{17}: checkout: moving from feature/new-feature to main
+ac10ba5 (origin/feature/new-feature, feature/new-feature) HEAD@{18}: commit: feat: Add new feature
+7a4f583 HEAD@{19}: checkout: moving from main to feature/new-feature
+70f04c7 HEAD@{20}: commit: docs: Add FAQ section
+7a4f583 HEAD@{21}: checkout: moving from feature/new-feature to main
+7a4f583 HEAD@{22}: reset: moving to HEAD
+7a4f583 HEAD@{23}: checkout: moving from main to feature/new-feature
+7a4f583 HEAD@{24}: commit (merge): merge: Resolve all conflicts between main and conflict-simulator branches
+17295e2 HEAD@{25}: checkout: moving from main to main
+17295e2 HEAD@{26}: commit (merge): merge: Resolve all conflicts between main and dev branches Conflicts resolved in 6 files: - config/app-config.yaml: Combined production and development configurations - config/database-config.json: Created separate profiles for each environment - scripts/deploy.sh: Added multi-environment support with conditional logic - scripts/monitor.js: Implemented environment-based configuration - docs/architecture.md: Merged documentation covering both environments - README.md: Combined feature lists and updated documentation Resolution strategy: Maintained production stability while integrating development features as optional configurations. All features are now accessible through environment variables.
+0312c6f (instructor/main, instructor/HEAD) HEAD@{27}: checkout: moving from dev to main
+02011a5 (instructor/dev, dev) HEAD@{28}: checkout: moving from main to dev
+0312c6f (instructor/main, instructor/HEAD) HEAD@{29}: checkout: moving from main to main
+0312c6f (instructor/main, instructor/HEAD) HEAD@{30}: checkout: moving from main to main
+0312c6f (instructor/main, instructor/HEAD) HEAD@{31}: checkout: moving from conflict-simulator to main
+d3dd9b2 (instructor/conflict-simulator, conflict-simulator) HEAD@{32}: checkout: moving from main to conflict-simulator
+0312c6f (instructor/main, instructor/HEAD) HEAD@{33}: clone: from https://github.com/partnrnetwork/git-mastery-challenge-template
+(END)
+
 ( Used ALL Git Command )_____________________>>>>>
 (1). Used fetch 1 time, pull 1 time.-------------------------------------------------------------------------------------------------------
 
